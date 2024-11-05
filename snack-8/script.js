@@ -22,5 +22,11 @@ const students = [
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
 
-const studentClass = students.find((student) => student.name === 'Marco Lanci').class
-console.log(studentClass) 
+// OPTIONAL CHAINING ?  controlla se esiste quello che cerchiamo, se esiste cerca la classe
+const studentClass = students.find((student) => student.name === 'Marco Lanci')?.class  // object || undefined
+
+// const studentClass = students.find((student) => student.name === 'Marco Lanci')?.class || ''
+// con opertatore logico OR, se la prima condizione non è vera, fa risultare stringa vuota
+
+console.log(studentClass)
+
